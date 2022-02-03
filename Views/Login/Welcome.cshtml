@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Welcome";
+}
+
+@if (Session["k_eposta"] != null)
+ {
+       <h2>Welcome</h2>
+}
+else
+{
+    Response.Redirect("Index");
+}
+
+<script type="text/javascript">
+    function preventBack() {
+        window.history.forward();
+    }
+    setTimeout("preventBack()", 0);
+    window.onunload = function () {
+        null;
+    }
+</script>

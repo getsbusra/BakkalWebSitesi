@@ -1,0 +1,32 @@
+﻿@model IEnumerable<BakkalWebSiteVt2.Models.Category>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.k_adi)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.k_adi)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.kategori_id}) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.kategori_id })
+        </td>
+    </tr>
+}
+
+</table>

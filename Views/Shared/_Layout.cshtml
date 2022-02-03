@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                       
+
+                          <a> <span class="title">BAKKAL WEB SİTESİ</span></a>
+                     
+                    </li>
+                    
+                    <li>
+                        <a href="/Kullanıcı/List">
+
+                            <span class="title">Kullanıcılar</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Category/List">
+
+                            <span class="title">Kategori</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Ürün/List">
+
+                            <span class="title">Ürün</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Brand/List">
+
+                            <span class="title">Marka</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Stok/List">
+
+                            <span class="title">Stok</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Satış/List">
+
+                            <span class="title">Satış İşlemleri</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Login/Index">
+
+                            <span class="title">Çıkış Yap</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+       
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

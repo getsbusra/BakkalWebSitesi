@@ -1,0 +1,44 @@
+﻿@model IEnumerable<BakkalWebSiteVt2.Models.Stok>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+           @Html.DisplayNameFor(model => model.s_adedi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.s_giris_tarihi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.s_bitis_tarihi)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.s_adedi)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.s_giris_tarihi)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.s_bitis_tarihi)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.stok_id }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.stok_id })
+    </td>
+</tr>
+}
+
+</table>

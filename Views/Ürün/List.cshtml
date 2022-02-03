@@ -1,0 +1,68 @@
+﻿@model IEnumerable<BakkalWebSiteVt2.Models.Ürün>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.u_adi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.u_barkodu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.u_tuketim_tarihi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.u_uretim_tarihi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.u_fiyat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.u_agirlik)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.u_rengi)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.u_adi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.u_barkodu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.u_tuketim_tarihi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.u_uretim_tarihi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.u_fiyat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.u_agirlik)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.u_rengi)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.urun_id}) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.urun_id })
+        </td>
+    </tr>
+}
+
+</table>

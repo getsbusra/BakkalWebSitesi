@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Animated Login Form | CodingNepal</title>
+   
+</head>
+<body>
+    <div class="center">
+        <h1>Rol Ekle</h1>
+        <form action="/Rol/Add" method="post">
+            <!-- Bir form oluşturulur input üzerine girilen veriler Controller içindeki Add fonksiyonuna yollanır -->
+            <h3>
+                Rol Adı Girin
+
+            </h3>
+            <label>
+                <span>Marka Adı :</span>
+                <input type="text" name="r_adi" placeholder="Marka adı girin.." style="margin-top:50px" />
+
+
+
+                <div class="button">
+                    <input type="submit" value="Add" style="margin-top:50px ; margin-left:10px">
+                </div>
+
+                <!-- Listeleme ekranına geri döndürür -->
+                <button type="button" class="btn btn-info" style=" width: 100%; height: 50px; border: 1px solid; background: #2691d9; border-radius: 25px; font-size: 18px; color: #e9f4fb; font-weight: 700; cursor: pointer; outline: none; margin-left:10px">
+                    <a href="/Rol/List" style="text-decoration: none; color: white">
+                        Listeleme Ekranına Dön
+                    </a>
+                </button>
+        </form>
+    </div>
+
+</body>
+</html>
+
+
+
+

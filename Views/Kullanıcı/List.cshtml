@@ -1,0 +1,74 @@
+﻿@model IEnumerable<BakkalWebSiteVt2.Models.Kullanıcı>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+@Html.Raw(TempData["InsertMsg"])
+@Html.Raw(TempData["UpdateMsg"])
+@Html.Raw(TempData["DeleteMsg"])
+@Html.Raw(TempData["DeleteErrorMsg"])
+
+
+<p>
+    @Html.ActionLink("Kullanıcı Ekle", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.k_kullaniciadi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.k_parola)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.k_adi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.k_soyadi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.k_eposta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.k_telefon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.k_durum)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.k_kullaniciadi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.k_parola)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.k_adi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.k_soyadi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.k_eposta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.k_telefon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.k_durum)
+            </td>
+            <td>
+                @Html.ActionLink("Düzenle", "Edit", new { id = item.kullanici_id })
+                @Html.ActionLink("Sil", "Delete", new { id = item.kullanici_id })
+            </td>
+        </tr>
+    }
+
+</table>

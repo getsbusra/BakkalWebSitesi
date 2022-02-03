@@ -1,0 +1,159 @@
+﻿
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bakkal Web Side</title>
+
+   
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16" style="margin-top:15px">
+                            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
+                        </svg>
+                        <span class="title" style="margin-top:15px">Bakkal Web Site</span>
+                    </a>
+
+                    <hr />
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                        <span class="title">Ana Sayfa</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/Category/List">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                                <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                            </svg>
+                        </span>
+                        <span class="title">Kategori</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/Ürün/List">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                                <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                            </svg>
+                        </span>
+                        <span class="title">Ürün</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/Brand/List">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                                <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                            </svg>
+                        </span>
+                        <span class="title">Marka</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/Stok/List">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                                <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                            </svg>
+                        </span>
+                        <span class="title">Stok</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/Satış/List">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z" />
+                                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                            </svg></ion-icon>
+                        </span>
+                        <span class="title">Satış İşlemleri</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        <!--Main-->
+        <div class="main">
+            <!--< Rol Tablosu Listeleniyor">-->
+
+            <div style="margin-top:50px ; margin-left:50px">
+                <div>
+                    <h2>Personel Rol Bilgileri</h2>
+                    <br />
+
+
+                    <button type="button" class="btn btn-success"> <a href="/Rol/Add" style="text-decoration: none; color: white">Yeni Bir Rol Ekle</a> </button>
+                    <hr />
+                </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td>Rol Id</td>
+                            <td>Rol Adı</td>
+                            <td>İşlemler</td>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!--veri listeleme -->
+                        @{ foreach (System.Data.DataRow table in ViewBag.table.Rows)
+                            {
+                                <tr>
+                                    <th>   <a style="margin-right:50px">  @table["rol_id"]</a> </th>
+                                    <th>      @table["r_adi"]</th>
+
+                                    <!--Butonlara tıklayınca üzerindeki işlemlerin gerçekleşmesi için link üzerinden işlem yapar -->
+                                    <th><button type="button" class="btn btn-danger"> <a style="text-decoration: none; color: white"> @Html.ActionLink("Delete", "Delete", new { id = @table["rol_id"] })</a>  </button>  </th>
+                                    <th> <button type="button" class="btn btn-warning"> <a style="text-decoration: none; color: white"> @Html.ActionLink("Update", "Update", new { @id = @table["rol_id"] }) </a> </button>     </th>
+                                </tr>
+
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+            <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+            <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+            <script>
+		//MenuToggle
+		let toggle = document.querySelector('.toggle');
+		let navigation = document.querySelector('.navigation');
+		let main = document.querySelector('.main');
+
+		toggle.onclick = function (){
+			navigation.classList.toggle('active')
+			main.classList.toggle('active')
+		}
+
+
+		// add hovered class in selected list item
+		let list=document.querySelectorAll('.navigation li');
+		function activeLink(){
+			list.forEach((item)=>
+					item.classList.remove('hovered'));
+			this.classList.add('hovered');
+		}
+		list.forEach((item)=>
+				item.addEventListener('mouseover',activeLink));
+            </script>
+</body>
+</html>
+
+

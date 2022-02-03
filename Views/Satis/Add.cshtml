@@ -1,0 +1,79 @@
+﻿
+
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Animated Login Form | CodingNepal</title>
+    
+</head>
+<body>
+    <div class="center">
+        <h1>Satis Ekle</h1>
+        <form action="/Satis/Add" method="post">
+            <!-- Bir form oluşturulur input üzerine girilen veriler Controller içindeki Add fonksiyonuna yollanır -->
+            <h3>
+                Satis Bilgilerini Girin
+
+            </h3>
+
+
+            <label>
+                <span>Kullanıcı Id :</span>
+                <input type="number" name="k_id" style="margin-top:50px" />
+
+            </label>
+            <label>
+                <span>Miktar :</span>
+                <input type="number" name="miktar" style="margin-top:50px" />
+
+            </label>
+            <label>
+                <span>Satis Tarihi :</span>
+                <input type="date" name="s_tarih" style="margin-top:50px" />
+
+            </label>
+            <label>
+                <span>Durum :</span>
+                <input type="text" name="durum" style="margin-top:50px" />
+
+            </label>
+            <label>
+                <span>Fiyat :</span>
+                <input type="number" name="fiyat" style="margin-top:50px" />
+
+            </label>
+            <label>
+                <span>İskonto :</span>
+                <input type="number" name="iskonto" style="margin-top:50px" />
+
+            </label>
+            <label>
+                <span>Satis Id :</span>
+                <input type="number" name="satis_id" style="margin-top:50px" />
+
+            </label>
+            <label>
+                <span>Urun Id :</span>
+                <input type="text" name="urun_id" style="margin-top:50px" />
+
+            </label>
+            <div class="button">
+                <input type="submit" value="Add" style="margin-top:50px ; margin-left:10px">
+            </div>
+
+            <!-- Listeleme ekranına geri döndürür -->
+            <button type="button" class="btn btn-info" style=" width: 100%; height: 50px; border: 1px solid; background: #2691d9; border-radius: 25px; font-size: 18px; color: #e9f4fb; font-weight: 700; cursor: pointer; outline: none; margin-left:10px">
+                <a href="/Rol/List" style="text-decoration: none; color: white">
+                    Listeleme Ekranına Dön
+                </a>
+            </button>
+        </form>
+    </div>
+    <h2>Add</h2>
+
